@@ -8,7 +8,49 @@
 </head>
 
 <body>
-<h1>Trolleado</h1>
+  <style>
+    body, html {
+        height: 100%; /* Asegura que el body ocupe toda la altura */
+        margin: 0; /* Elimina el margen por defecto */
+        display: flex; /* Usa flexbox para centrar */
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+    }
+</style>
+
+<h1>Trolled</h1>
+  <audio id="audio" loop volume="1.0">
+    <source src="sonido.mp3" type="audio/mpeg"> <!-- Reemplaza con la URL de tu sonido -->
+    Tu navegador no soporta el audio.
+</audio>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const audio = document.getElementById("audio");
+        audio.volume = 1.0; // Máximo volumen
+        audio.play().catch(error => console.log("Autoplay bloqueado"));
+
+        function requestFullScreen() {
+            const elem = document.documentElement;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) {
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            }
+        }
+
+        requestFullScreen();
+
+        document.addEventListener("click", () => {
+            audio.play();
+            requestFullScreen();
+        });
+    });
+</script>
 </body>
 
 </html>
