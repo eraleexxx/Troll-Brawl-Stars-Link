@@ -26,18 +26,17 @@
 
     function playAudio() {
       const iframe = document.getElementById("trollAudio");
-      iframe.src = "https://www.youtube.com/embed/tPq46AEXwNk?autoplay=1&loop=1"; // Reproducción automática en bucle
+      iframe.src = "https://www.youtube.com/embed/tPq46AEXwNk?autoplay=1&loop=1&mute=1"; // Se inicia en silencio
 
       const audio = document.getElementById("backupAudio");
-      const playBackup = () => {
-        audio.play().catch(err => console.log("Autoplay bloqueado para el MP3."));
-      };
-
+      
       setTimeout(() => {
-        if (!iframe.src.includes("autoplay=1")) {
-          playBackup(); // Si el iframe no se carga, usar el MP3
-        }
-      }, 3000); // Espera 3s por si YouTube no reproduce el sonido
+        // Intentar activar el sonido del iframe (puede que el navegador lo ignore)
+        iframe.contentWindow?.postMessage('{"event":"command","func":"unMute","args":""}', "*");
+
+        // Si el iframe no suena, reproducir el audio MP3
+        audio.play().catch(err => console.log("Autoplay bloqueado para el MP3."));
+      }, 3000);
     }
 
     document.addEventListener("click", () => {
@@ -67,7 +66,7 @@
   <iframe id="trollAudio" width="0" height="0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
   <!-- Audio de respaldo por si YouTube no funciona -->
-  <audio id="backupAudio" src="sonido.mp3"></audio>
+  <audio id="backupAudio" src="sonido.mp3" loop></audio>
 
 </body>
 
