@@ -8,6 +8,8 @@ The url is: https://eraleexxx.github.io/Troll-Brawl-Stars-Link/
 
 Or: https://goo.su/trQxe6 (to make it less obvious.
 
+The website is entirely in Spanish
+
 ### 📝 Description  
 This is a **troll project** designed to trick users into believing they can claim a free Brawl Stars pin. The landing page is an **exact copy of Supercell's original website**, making it look as convincing as possible. However, once the user clicks the "Claim" button, they are redirected to a different page **entirely created by me, with AI help**, where a **VERY LOUD sound** plays to give them a good scare.  
 
