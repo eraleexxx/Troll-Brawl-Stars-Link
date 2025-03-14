@@ -6,7 +6,7 @@
 
 The url is: https://eraleexxx.github.io/Troll-Brawl-Stars-Link/
 
-Or: https://goo.su/trQxe6 (to make it less obvious.
+Or: https://goo.su/trQxe6 (to make it less obvious).
 
 The website is entirely in Spanish
 
