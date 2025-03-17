@@ -8,6 +8,8 @@ The url is: https://eraleexxx.github.io/Troll-Brawl-Stars-Link/
 
 Or: https://goo.su/trQxe6 (to make it less obvious).
 
+And if you want even more credibility: https://brawlestars.netlify.app/
+
 The website is entirely in Spanish
 
 ### 📝 Description  
