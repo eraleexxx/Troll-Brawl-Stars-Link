@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/prerender/*"
+  to = "https://brawlestars.netlify.app/"
+  status = 301
